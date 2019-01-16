@@ -4,6 +4,9 @@ import "./App.css";
 import Particles from "react-particles-js";
 import ReactResizeDetector from 'react-resize-detector';
 import Grid from '@material-ui/core/Grid';
+import { Column } from 'simple-flexbox';
+import imgLogin from './images/imgLogin.png';
+import { Container, Row, Col } from 'react-bootstrap';
 
 class Login extends Component {
   constructor(props) {
@@ -134,13 +137,23 @@ class Login extends Component {
             retina_detect: true
           }}
           style={{
-            background: `#ddbeed`,
-            zIndex: '2',
-            position: 'absolute'
+            background: `#e3f2fd`,
+             position: 'absolute'
           }}
         />
-        <Grid container style={{zIndex: '1'}}>fdvdfgvhbjnkml,vfh
-        </Grid>
+      <Column flexGrow={1} style={{  position: 'absolute', background: '#ffffff', top: "50%",
+    left: "50%",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)", height: "60%", width: "45%", borderRadius: "15px"}}>
+
+          <Row>
+            <Col md={6}>md6
+              </Col>
+          <Col md={6}>
+          md6</Col>
+          </Row>
+
+      </Column>
       </div>
     );
   }
